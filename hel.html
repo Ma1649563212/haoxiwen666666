@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>细纹主页 - 美图分享</title>
+    <style>
+        /* 全局样式重置 + 基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+        }
+
+        /* 页面背景 + 整体居中 */
+        body {
+            background-color: #f8f9fa; /* 柔和的浅灰色背景，不刺眼 */
+            color: #333; /* 深灰色文字，比纯黑更舒适 */
+            max-width: 1200px; /* 限制页面最大宽度，避免电脑端太宽 */
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px; /* 页面内边距 */
+            line-height: 1.6; /* 行高，提升文字可读性 */
+        }
+
+        /* 标题样式 */
+        h1 {
+            color: #2c3e50; /* 深蓝色主标题，沉稳大气 */
+            text-align: center; /* 居中显示 */
+            margin: 30px 0 20px; /* 上下间距 */
+            font-size: 2.5rem; /* 大号字体 */
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #34495e; /* 次深蓝色副标题 */
+            margin: 30px 0 15px;
+            font-size: 1.8rem;
+            border-left: 4px solid #3498db; /* 左侧蓝色装饰线 */
+            padding-left: 10px; /* 文字和装饰线的间距 */
+        }
+
+        /* 链接样式（按钮化） */
+        a {
+            display: inline-block; /* 可设置宽高/间距 */
+            background-color: #3498db; /* 清新的蓝色主色调 */
+            color: white !important; /* 白色文字 */
+            text-decoration: none; /* 去掉下划线 */
+            padding: 12px 24px; /* 内边距，做成按钮样式 */
+            border-radius: 8px; /* 圆角，更柔和 */
+            margin: 10px 0 20px; /* 上下间距 */
+            transition: background-color 0.3s; /*  hover过渡动画 */
+            font-size: 1.1rem;
+        }
+
+        /* 链接hover效果（鼠标悬浮） */
+        a:hover {
+            background-color: #2980b9; /* 加深蓝色，有交互反馈 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 轻微阴影，有立体感 */
+        }
+
+        /* 段落文字 */
+        p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: #555; /* 中灰色，比标题浅，层次分明 */
+        }
+
+        /* 图片容器：网格布局，自动适配 */
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 响应式网格 */
+            gap: 20px; /* 图片之间的间距 */
+            margin: 20px 0;
+        }
+
+        /* 图片样式 */
+        .image-container img {
+            width: 100%; /* 自适应容器宽度 */
+            height: auto; /* 保持宽高比，不拉伸 */
+            border-radius: 10px; /* 图片圆角 */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 轻微阴影，提升质感 */
+            object-fit: cover; /* 裁剪但保持比例 */
+            transition: transform 0.3s; /* 悬浮放大动画 */
+        }
+
+        /* 图片hover效果 */
+        .image-container img:hover {
+            transform: scale(1.02); /* 轻微放大，有交互感 */
+        }
+
+        /* 适配手机端 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            a {
+                width: 100%; /* 手机端按钮占满宽度 */
+                text-align: center;
+            }
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>主页</h1>
+    
+    <!-- 抖音链接按钮 -->
+    <a href="https://www.douyin.com/user/MS4wLjABAAAA6wLKI3e8wUVQ_NYlCL0LhYMGJBis2PaMdfLw4bb5VNUPwK0PZCe-9NA1R1Ld_hOE">点击直达细纹主页</a>
+    
+    <p>好康</p> 
+
+    <!-- 第一组图片容器 -->
+    <div class="image-container">
+        <img src="images/3.jpg" width="337" height="450" alt="精美图片1" />
+        <img src="images/2.jpg" width="368" height="491" alt="精美图片2" />
+    </div>
+
+    <h2>美图</h2> 
+
+    <!-- 第二组图片容器 -->
+    <div class="image-container">
+        <img src="images/1.jpg" width="498" height="280" alt="精美图片3" />
+        <img src="images/4.jpg" width="368" height="491" alt="精美图片4" />
+    </div>
+
+    <p>好美</p> 
+    <p>美</p>  
+</body>
+</html>
